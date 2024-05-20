@@ -55,10 +55,10 @@ app.post("/insertseoul", fileUpload.single("foodImage"), (req, res) => {
   const mainFood = req.body.mainFood;
   const comment = req.body.comment;
   const foodImage = req.file.path;
-  //console.log(foodImage);
+  console.log(foodImage);
   //console.log(comment);
   cloudinary.uploader.upload(req.file.path, (result) => {
-    //console.log(result);
+    console.log(result);
     const newFoodList = new FoodListSchema({
       name,
       place,
